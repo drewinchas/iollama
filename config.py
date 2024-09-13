@@ -17,3 +17,6 @@ MONGO_HOST = os.getenv('MONGO_HOST', 'localhost')
 MONGO_PORT = os.getenv('MONGO_PORT', 27017)
 MONGO_USER = os.getenv('MONGO_USER', 'testuser')
 MONGO_PASS = os.getenv('MONGO_PASS', 'testpass')
+
+# Enable Parallelism with tokenizers
+#TOKENIZERS_PARALLELISM="false"

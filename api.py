@@ -6,6 +6,7 @@ import logging
 import sys
 from model import *
 from config import *
+from make_index import *
 
 app = Flask(__name__)
 CORS(app)
@@ -26,7 +27,6 @@ def post_question():
 
 if __name__ == '__main__':
     init_llm()
-    index = init_index(Settings.embed_model)
+    index = make_index()
     init_query_engine(index)
-
     app.run(host='0.0.0.0', port=HTTP_PORT, debug=True)
